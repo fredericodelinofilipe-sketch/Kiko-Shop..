@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KIKO SHOP</title>
+<style>
+body{font-family:Arial;background:#eef2f7;margin:0}
+header{background:#075985;color:white;padding:20px;text-align:center}
+main{padding:15px}
+.produto{background:white;padding:15px;margin-bottom:15px;border-radius:12px}
+button{background:#0284c7;color:white;border:0;padding:12px;border-radius:8px;width:100%;font-size:16px}
+</style>
+</head>
+<body>
+<header>
+<h1>KIKO SHOP</h1>
+<p>A tua loja online!</p>
+</header>
+<main>
+<h2>Produtos disponíveis</h2>
+<div class="produto">
+<h3>Camisa</h3>
+<p>500 MT</p>
+<button onclick="encomendar('Camisa - 500 MT')">Encomendar</button>
+</div>
+<div class="produto">
+<h3>Calçado</h3>
+<p>1000 MT</p>
+<button onclick="encomendar('Calcado - 1000 MT')">Encomendar</button>
+</div>
+<div class="produto">
+<h3>Mochila</h3>
+<p>750 MT</p>
+<button onclick="encomendar('Mochila - 750 MT')">Encomendar</button>
+</div>
+</main>
+<script>
+function encomendar(nome){
+const telefone = "258870477672";
+const mensagem = "Ola KIKO SHOP, quero encomendar: " + nome;
+const link = "https://wa.me/" + telefone + "?text=" + encodeURIComponent(mensagem);
+window.open(link, "_blank");
+}
+</script>
+</body>
+  </html>
